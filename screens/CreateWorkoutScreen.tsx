@@ -165,7 +165,7 @@ const AddWorkout = ({ navigation }) => {
         <Text style={styles.timerText}>{formatTime(timer)}</Text>
         <Button title={isRunning ? 'Пауза' : 'Старт'} onPress={() => setIsRunning(!isRunning)} />
       </View>
-      <Button title="Добавити вправу" onPress={() => setModalVisible(true)} containerStyle={styles.addButton} />
+      <Button title="Додати вправу" onPress={() => setModalVisible(true)} containerStyle={styles.addButton} />
       {workoutExercises.map((exercise, index) => (
         <View key={index} style={styles.exerciseContainer}>
           <Text style={styles.exerciseName}>{exercise.name}</Text>
@@ -206,7 +206,7 @@ const AddWorkout = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           ))}
-          <Button title="Добавити підхід" onPress={() => addSet(exercise.id)} buttonStyle={styles.addSetButton} containerStyle={styles.addSetButtonContainer} />
+          <Button title="Додати підхід" onPress={() => addSet(exercise.id)} buttonStyle={styles.addSetButton} containerStyle={styles.addSetButtonContainer} />
         </View>
       ))}
       <Button title="Зберегти" onPress={saveWorkout} loading={loading} containerStyle={styles.saveButton} />
@@ -234,7 +234,7 @@ const AddWorkout = ({ navigation }) => {
               ))}
             </ScrollView>
             <View style={styles.modalButtonGroup}>
-              <Button title="Добавити" onPress={addExerciseToWorkout} />
+              <Button title="Додати" onPress={addExerciseToWorkout} />
               <Button title="Закрити" onPress={() => setModalVisible(false)} containerStyle={styles.modalButton} />
             </View>
           </View>
